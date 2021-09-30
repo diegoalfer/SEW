@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Comparte tu opinión</title>
+    <meta name="Autor" content="Diego Álvarez Fernández">
+    <meta name="Descripción" content="Formulario en el que el usuario puede dejar su opinión acerca de PHP">
+    <meta name="Palabras clave" content="PHP, web, opinión, reseña">
+</head>
+
+<body>
+    <h1>Comparte tu opinión</h1>
+    <p>¡Queremos saber tu opinión! Rellena los campos de abajo y comparte tu experiencia con el lenguaje PHP.</p>
+    <form>
+        <label for="nombre">Nombre: </label><br>
+        <input type="text" id="nombre" name="nombre"><br>
+        <label for="apellidos">Apellidos: </label><br>
+        <input type="text" id="apellidos" name="apellidos"><br>
+        <p>Género:</p>
+    <div>
+        <input type="radio" id="hombre" name="genero" value="hombre">
+        <label for="hombre">Hombre</label>
+    </div>
+    <div>
+        <input type="radio" id="mujer" name="genero" value="mujer">
+        <label for="mujer">Mujer</label>
+    </div>
+    <div>
+        <input type="radio" id="noespecificar" name="genero" value="noespecificar">
+        <label for="noespecificar">No especificar</label><br>
+    </div>
+    <br>
+        <label for="opinion">Opinión: </label>
+        <p><textarea name="opinion" id="opinion"></textarea></p>
+        <p>Publicar anónimamente</p>
+    <div>
+        <input type="radio" id="si" name="anonimo" value="si">
+        <label for="si">Sí</label>
+    </div>
+    <div>
+        <input type="radio" id="no" name="anonimo" value="no" checked>
+        <label for="no">No</label>
+    </div>
+
+    </form>
+</body>
+</html>
