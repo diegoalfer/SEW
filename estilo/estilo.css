@@ -25,7 +25,7 @@
     color:white;
     overflow: hidden;
   }
- /* a=0 b=0 c=1 -> specificity =   2*/  nav a {
+ /* a=0 b=0 c=2 -> specificity =   2*/  nav a {
     float: left;
     color: #f2f2f2;
     background-color: darkslateblue;
@@ -67,7 +67,6 @@
 /* a=0 b=0 c=1 -> specificity =   1*/ table{
      font-family: Arial, Helvetica, sans-serif;
      border-collapse: collapse;
-     width: 100%;
      font-size: 20px;
 }
 
