@@ -4,6 +4,7 @@
     font-size: 60px;
     color:white;
     background-color: darkslateblue;
+    border-radius: 7px;
 }
 /* a=0 b=0 c=1 -> specificity =   1*/ h2,h3,h4{
     font-family: "Times New Roman", Times, serif;
@@ -11,6 +12,7 @@
     font-size: 30px;
     color:darkslateblue;
     background-color: white;
+
 }
 
 /* a=0 b=0 c=1 -> specificity =   1*/ p{
@@ -24,6 +26,7 @@
     background-color: darkslateblue;
     color:white;
     overflow: hidden;
+    border-radius: 7px;
   }
  /* a=0 b=0 c=2 -> specificity =   2*/  nav a {
     float: left;
@@ -94,6 +97,34 @@
       color: black;
     }
 
+ /* a=0 b=0 c=1 -> specificity =   1*/ video{
+      max-width: 100%;
+      height: auto;
+    }
+
+
+
+     /* a=0 b=1 c=1 -> specificity =   11*/input[type=submit] {
+      background-color: darkslateblue;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: left;
+    }
+
+    /* a=0 b=1 c=1 -> specificity =   11*/label{
+      font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color:black;
+    background-color: white;
+    }
+
+    textarea{
+      width:400px;
+      height:150px;
+    }
 
 
 
