@@ -63,6 +63,7 @@ img{
     padding: 0.5em;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
+    max-width: 100%;
     color:black;
     background-color: white;
   }
@@ -111,6 +112,8 @@ img{
       margin-left: auto;
       margin-right: auto;
       block-size:60%;
+      max-width: 100%;
+      height: auto;
     }
 
 
