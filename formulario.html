@@ -25,11 +25,11 @@
     <h1>Comparte tu opinión</h1>
     <p>¡Queremos saber tu opinión! Rellena los campos de abajo y comparte tu experiencia con el lenguaje PHP.</p>
     <form>
+        <fieldset>
         <label for="nombre">Nombre: </label><br>
         <input type="text" id="nombre" name="nombre"><br>
         <label for="apellidos">Apellidos: </label><br>
         <input type="text" id="apellidos" name="apellidos"><br>
-    </form>
         <p>Género:</p>
         <form>
         <input type="radio" id="hombre" name="genero" value="hombre">
@@ -38,14 +38,12 @@
         <label for="mujer">Mujer</label>
         <input type="radio" id="noespecificar" name="genero" value="noespecificar">
         <label for="noespecificar">No especificar</label><br>
-    </form>
+    </fieldset>
     <br>
-    <form>
+<fieldset>
         <label for="opinion">Opinión: </label>
         <p><textarea name="opinion" id="opinion"></textarea></p>
-    </form>
         <p>Publicar anónimamente</p>
-    <form>
         <input type="radio" id="si" name="anonimo" value="si">
         <label for="si">Sí</label>
         <input type="radio" id="no" name="anonimo" value="no" checked>
@@ -53,8 +51,10 @@
         <br>
         <br>
         <br>
+    </fieldset>
+    <br>
         <input type="submit" value="Compartir">
-
+    
     </form>
     </main>
     <footer>Información de contacto: diegoalfer23@gmail.com</footer>
