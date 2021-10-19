@@ -1,23 +1,29 @@
 /* a=0 b=0 c=1 -> specificity =   1*/ h1{
     font-family: "Times New Roman", Times, serif;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 4em;
+    text-align: center;
     color:white;
     background-color: darkslateblue;
-    border-radius: 7px;
+    border-radius: 0.4em;
 }
 /* a=0 b=0 c=1 -> specificity =   1*/ h2,h3,h4{
     font-family: "Times New Roman", Times, serif;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 2em;
     color:darkslateblue;
     background-color: white;
 
 }
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* a=0 b=0 c=1 -> specificity =   1*/ p{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 1.2em;
     color:black;
     background-color: white;
 }
@@ -26,7 +32,10 @@
     background-color: darkslateblue;
     color:white;
     overflow: hidden;
-    border-radius: 7px;
+    border-radius: 0.4em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
   }
  /* a=0 b=0 c=2 -> specificity =   2*/  nav a {
     float: left;
@@ -34,8 +43,8 @@
     background-color: darkslateblue;
     text-align: center;
     text-decoration:none;
-    padding: 14px 16px;
-    font-size: 17px;
+    padding: 0.9em 1em;
+    font-size: 1em;
   }
   
   /* a=0 b=1 c=2 -> specificity =   12*/ nav a:hover {
@@ -50,10 +59,10 @@
 
 
 /* a=0 b=0 c=1 -> specificity =   1*/ dl {
-    border: 3px double #ccc;
+    border: 0.2em double #ccc;
     padding: 0.5em;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 1.2em;
     color:black;
     background-color: white;
   }
@@ -72,23 +81,23 @@
      border-collapse: collapse;
      width: 100%;
      max-width: 100%;
-     font-size: 20px;
+     font-size: 1.2em;
 }
 
  /* a=0 b=0 c=1 -> specificity =   1*/ th {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
     text-align: left;
-    background-color: darkslateblue;
+    background-color: rgb(9, 143, 143);
     color: white;
   }
 
  /* a=0 b=0 c=1 -> specificity =   1*/ td, th {
-    border: 1px solid #ddd;
+    border: 0.1em solid #ddd;
   }
 
    /* a=0 b=0 c=1 -> specificity =   1*/ td {
-    padding:8px;
+    padding:0.5em;
   }
 
   /* a=0 b=1 c=2 -> specificity =   12*/
@@ -97,9 +106,11 @@
       color: black;
     }
 
- /* a=0 b=0 c=1 -> specificity =   1*/ video{
-      max-width: 100%;
-      height: auto;
+    video{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      block-size:60%;
     }
 
 
@@ -107,24 +118,53 @@
      /* a=0 b=1 c=1 -> specificity =   11*/input[type=submit] {
       background-color: darkslateblue;
       color: white;
-      padding: 12px 20px;
+      padding: 0.8em 1.2em;
       border: none;
-      border-radius: 4px;
+      border-radius: 0.25em;
       cursor: pointer;
       float: left;
     }
 
     /* a=0 b=1 c=1 -> specificity =   11*/label{
       font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 1.2em;
     color:black;
     background-color: white;
     }
 
+     /* a=0 b=0 c=1 -> specificity =   01*/
     textarea{
-      width:400px;
-      height:150px;
+      width:25em;
+      height:9.3em;
     }
+
+    body{
+      display:grid;
+      grid-template-columns: [x0] 1fr;
+      grid-template-rows: [y0] 0.4fr [y1] 10fr [y2] 10fr [y3] 0.4fr;
+    }
+
+    
+
+    header{
+      grid-column: x0;
+    }
+
+    main{
+      grid-column: x0;
+      grid-row:y1/y3;
+    }
+
+    footer{
+      background-color: darkslateblue;
+      color:white;
+      padding:1em;
+      border-radius:0.25em;
+      text-align: center;
+      grid-column:x0;
+      grid-row:y3;
+    }
+
 
 
 
