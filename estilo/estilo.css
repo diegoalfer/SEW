@@ -1,3 +1,81 @@
+/* a=0 b=0 c=1 -> specificity =   1*/ h1{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    font-size: 60px;
+    color:darkslateblue;
+    background-color: aliceblue;
+}
+/* a=0 b=0 c=1 -> specificity =   1*/ h2,h3,h4{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    font-size: 30px;
+    color:darkslateblue;
+    background-color: aliceblue;
+}
+
+/* a=0 b=0 c=1 -> specificity =   1*/ p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color:black;
+}
+
+/* a=0 b=0 c=2 -> specificity =   2*/ nav a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color:azure;
+}
+
+/* a=0 b=1 c=2 -> specificity =   12*/ nav a:link{
+    color:red;
+}
+/* a=0 b=1 c=2 -> specificity =   12*/ nav a:visited{
+    color:red;
+}
+/* a=0 b=1 c=2 -> specificity =   12*/ nav a:hover{
+    color:hotpink;
+}
+/* a=0 b=1 c=2 -> specificity =   12*/ nav a:active{
+    color:blue;
+}
+
+/* a=0 b=0 c=1 -> specificity =   1*/ dl {
+    border: 3px double #ccc;
+    padding: 0.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color:black;
+  }
+
+/* a=0 b=0 c=1 -> specificity =   1*/ dt {
+    font-weight: bold;
+    color:darkslateblue;
+  }
+
+/* a=0 b=0 c=2 -> specificity =   2*/ dt::after {
+    content: ":";
+  }
+/* a=0 b=0 c=1 -> specificity =   1*/ table{
+     font-family: Arial, Helvetica, sans-serif;
+     border-collapse: collapse;
+     width: 100%;
+}
+
+ /* a=0 b=0 c=1 -> specificity =   1*/ th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: darkslateblue;
+    color: white;
+  }
+
+ /* a=0 b=0 c=1 -> specificity =   1*/ td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  /* a=0 b=1 c=2 -> specificity =   12*/
+  tr:nth-child(even){background-color: #f2f2f2;}
+
 
 
 
