@@ -15,10 +15,12 @@
     background-color: white;
 
 }
-img{
+/* a=0 b=0 c=1 -> specificity =   1*/img{
   display: block;
   margin-left: auto;
   margin-right: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* a=0 b=0 c=1 -> specificity =   1*/ p{
@@ -76,6 +78,7 @@ img{
   }
 
   /* a=0 b=0 c=1 -> specificity =   1*/ dd {
+    background-color: white;
     color:black;
     font-size: 1.4em;
   }
@@ -150,7 +153,7 @@ img{
     /* a=0 b=0 c=1 -> specificity =   1*/body{
       display:grid;
       grid-template-columns: [x0] 1fr;
-      grid-template-rows: [y0] 0.4fr [y1] 10fr [y2] 10fr [y3] 0.4fr;
+      grid-template-rows: [y0] 0.4fr [y1] 10fr [y2] 3fr [y3] 0.4fr;
     }
 
     
@@ -160,7 +163,6 @@ img{
     }
 
     /* a=0 b=0 c=1 -> specificity =   1*/main{
-      grid-column: x0;
       grid-row:y1/y3;
     }
 
@@ -170,7 +172,6 @@ img{
       padding:1em;
       border-radius:0.25em;
       text-align: center;
-      grid-column:x0;
       grid-row:y3;
       font-size:1.4em;
     }
